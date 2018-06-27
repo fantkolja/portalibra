@@ -1,0 +1,2 @@
+# portalibra
+Platform for dictionaries
