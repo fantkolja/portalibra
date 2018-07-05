@@ -2,11 +2,13 @@
   "name": "portalibra",
   "version": "0.0.0",
   "description": "Portal for dictionaries",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts",
-    "test": "mocha"
+    "dev": "nodemon",
+    "test": "jest",
+    "lint": "tslint -p ./"
   },
+  "pre-commit": "lint",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fantkolja/portalibra.git"
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@types/express": "^4.16.0",
     "nodemon": "^1.17.5",
+    "pre-commit": "^1.2.2",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2",
