@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { HttpServer} from './httpServer.model';
+import { HttpServer } from './httpServer.model';
 
 export class ApiServer implements HttpServer {
   private app: express.Application;
