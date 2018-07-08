@@ -1,6 +1,6 @@
-// import * as express from 'express';
 import { ApiServer } from './api/server';
 
-const server: ApiServer = new ApiServer(5000);
+const port: number = Number(process.env.API_PORT);
+const server: ApiServer = new ApiServer(port);
 
 server.start();

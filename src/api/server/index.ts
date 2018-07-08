@@ -1,5 +1,6 @@
 import * as express from 'express';
 import { HttpServer } from './httpServer.model';
+import { Server } from 'http';
 
 export class ApiServer implements HttpServer {
   private app: express.Application;
@@ -9,11 +10,10 @@ export class ApiServer implements HttpServer {
   }
 
   public get(url: string, requestHandler: express.RequestHandler): void {
-    console.log(url);
+    this.app.get(url, requestHandler);
   }
 
-  public start(): void {
-    this.app.listen(this.port, () => console.log(`API server is listening on ${this.port} port`));
-
+  public start(): Server {
+    return this.app.listen(this.port, () => console.log(`API server is listening on ${this.port} port`));
   }
 }
