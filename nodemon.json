@@ -13,6 +13,9 @@
     "start": "tslint -c ./tslint.json -t stylish 'src/**/*.ts'"
   },
   "env": {
-    "NODE_ENV": "development"
+    "NODE_ENV": "development",
+    "API_PORT": 5000,
+    "API_TEST_PORT": 5001,
+    "API_URL": "http://localhost"
   }
 }
