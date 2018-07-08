@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { HttpServer } from './httpServer.model';
+import { HttpServer} from './httpServer.model';
 
 export class ApiServer implements HttpServer {
   private app: express.Application;
@@ -14,5 +14,6 @@ export class ApiServer implements HttpServer {
 
   public start(): void {
     this.app.listen(this.port, () => console.log(`API server is listening on ${this.port} port`));
+
   }
 }

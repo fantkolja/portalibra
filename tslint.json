@@ -123,6 +123,7 @@
 			"check-operator",
 			"check-separator",
 			"check-type"
-		]
+		],
+    "no-boolean-literal-compare": false
 	}
 }
