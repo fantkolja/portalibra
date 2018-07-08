@@ -1,6 +1,6 @@
 // import * as express from 'express';
-// import { HttpServer } from './server/httpServer';
+import { ApiServer } from './api/server';
 
-// const server: HttpServer = {};
+const server: ApiServer = new ApiServer(5000);
 
-console.log('Index.');
+server.start();

@@ -9,6 +9,9 @@
   "execMap": {
     "ts": "ts-node"
   },
+  "events": {
+    "start": "tslint -c ./tslint.json -t stylish 'src/**/*.ts'"
+  },
   "env": {
     "NODE_ENV": "development"
   }

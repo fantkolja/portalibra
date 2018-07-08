@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "nodemon",
+    "build": "tbd",
     "test": "jest",
     "lint": "tslint -p ./"
   },
