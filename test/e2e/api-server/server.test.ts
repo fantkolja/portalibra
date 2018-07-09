@@ -13,7 +13,7 @@ describe('API Server', () => {
     port = Number(5001);
     const api = new ApiServer(port);
     api.get('/', (req, res) => {
-      res.status(404).json({
+      res.status(200).json({
         message: 'API is ALIVE',
       });
     });

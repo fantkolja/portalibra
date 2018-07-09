@@ -13,6 +13,10 @@ export class ApiServer implements HttpServer {
     this.app.get(url, requestHandler);
   }
 
+  public addRouter(url: string, router: express.Router): void {
+    this.app.use(url, router);
+  }
+
   public start(): Server {
     return this.app.listen(this.port, () => console.log(`API server is listening on ${this.port} port`));
   }

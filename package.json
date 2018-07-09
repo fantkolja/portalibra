@@ -4,9 +4,9 @@
   "description": "Portal for dictionaries",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "nodemon",
-    "build": "tbd",
-    "test": "jest --noStackTrace",
+    "dev": "set NODE_ENV=development&& nodemon",
+    "build": "set NODE_ENV=production",
+    "test": "set NODE_ENV=testing&& jest --noStackTrace",
     "lint": "tslint -p ./"
   },
   "pre-commit": "lint",
