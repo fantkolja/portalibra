@@ -1,7 +1,10 @@
 import { ApiServer } from './api/server';
+import { DictionaryController } from './api/controllers/DictionaryController';
 
 const port: number = Number(process.env.API_PORT);
 const server: ApiServer = new ApiServer(port);
+
+server.addControllers([DictionaryController]);
 
 // TODO: useExpressServer(app, { // register created express server in routing-controllers
 //   controllers: [UserController] // and configure it the way you need (controllers, validation, etc.)
