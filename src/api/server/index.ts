@@ -1,7 +1,7 @@
 import * as express from 'express';
 import { HttpServer } from './httpServer.model';
 import { Server } from 'http';
-import { ControllerConstructor } from '../controllers/controller.model';
+import { Controller, ControllerConstructor } from '../controllers/controller.model';
 
 function setAccessControlHeaders(res: express.Response): void {
   res.set('Access-Control-Allow-Origin', '*');
@@ -36,7 +36,7 @@ export class ApiServer implements HttpServer {
 
   // TODO: specify controller type
   public addControllers(controllers: ControllerConstructor[]): void {
-    controllers.forEach((controller) => {
+    controllers.forEach((controller): Controller => {
       return new controller(this);
     });
   }
