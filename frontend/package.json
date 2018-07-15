@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --open",
+    "build": "ng build --prod --aot --build-optimizer --optimization --progress",
     "test": "ng test",
     "lint": "ng lint",
+    "lint-fix": "tslint --fix --project ./tsconfig.json",
     "e2e": "ng e2e"
   },
   "private": true,
