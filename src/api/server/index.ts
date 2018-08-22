@@ -31,7 +31,7 @@ export class ApiServer implements HttpServer {
   }
 
   public addRouter(url: string, router: express.Router): void {
-    this.app.use(url, router);
+    this.app.use(`/api${url}`, router);
   }
 
   // TODO: specify controller type
