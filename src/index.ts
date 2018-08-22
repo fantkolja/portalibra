@@ -11,9 +11,12 @@ const staticRoot = path.join(__dirname, '../frontend/dist/frontend');
 const staticMiddleware: express.Handler = express.static(`${staticRoot}`);
 
 // app.use(logger('dev'));
-server.addMiddleware(staticMiddleware);
-
+// TODO: INTERCEPT all /api calls
 server.addControllers([DictionaryController, HeroController]);
+server.addMiddleware(staticMiddleware);
+server.get('/*', (req, res) => {
+  res.status(200).sendFile(`${staticRoot}/index.html`);
+});
 // TODO: useExpressServer(app, { // register created express server in routing-controllers
 //   controllers: [UserController] // and configure it the way you need (controllers, validation, etc.)
 // });
